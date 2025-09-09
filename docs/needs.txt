@@ -1,0 +1,30 @@
+Needs Analysis:
+
+Tone Recognition (Reading) **MVP**
+- Covers all tone combinations for each consonant class (high, mid, low), live/dead, and long/short syllables.
+- Displays a Thai word and asks for tone identification based solely on script rules.
+- Uses a chart database that follows the Thai tone rules for automated generation and validation of practice questions.
+- Provides instant, AI-powered feedback.
+
+Word Recognition (Reading)
+- The system shows Thai words and prompts for English meaning selection.
+- Additionally, test on Thai numbers as well
+- The module can pull dictionary entries and high-frequency vocabulary.
+- Have the AI highlight and drill exceptional words—ones that don't obey typical Thai script conventions and must be memorized individually, like อาหาร (food) 
+
+Translation (Writing)
+- Presents an English word and requests the user to write the correct Thai equivalent in the script.
+- AI checks spelling, tone marks, consonant class accuracy, and gives immediate feedback.
+
+Listening Comprehension (Writing)
+- Plays a native Thai reading of a word/syllable and asks for the written Thai script.
+
+Rule Discovery (AI-Powered)
+AI can be set to periodically scour reputable web sources and teaching materials for new or unusual Thai writing rules, such as the special usages of รร (which often acts as a vowel and changes pronunciation), and surface a "new rule" for practice in each session. 
+
+Extract Sentences from Authentic Materials
+Include a feature where the system picks sentences from books, news, or passages (leveraging Thai reader datasets or web scraping). This gives exposure to real-world Thai usage, context, and writing styles, ensuring your reading practice is relevant and varied.
+
+Future possibilities:
+Telegram chatbot for texting practices
+

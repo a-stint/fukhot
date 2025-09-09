@@ -1,0 +1,12 @@
+MVP (TONE RECOGNITION):
+ 
+Database to contain the thai script table rules
+Backend to pick at random:
+	1. high / mid / low class consonant
+	2. long / short vowel
+	3. dead / live ending (optional as not all words have endings)
+Frontend to show the Thai word
+Input: User is to type in or select the tone: flat / low / falling / high / rising
+Backend to check answer and return correct or wrong
+Backend to store memory of wrong type and test more of that kind (if possible)
+
