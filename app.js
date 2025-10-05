@@ -146,12 +146,10 @@ class ThaiToneDriller {
       this.toggleToneRules();
     });
 
-    const toggleTableBtn = document.getElementById("toggleTable");
-    if (toggleTableBtn) {
-      toggleTableBtn.addEventListener("click", () => {
-        this.toggleToneTable();
-      });
-    }
+    // Toggle table
+    document.getElementById("toggleTable").addEventListener("click", () => {
+      this.toggleToneTable();
+    });
 
     // Keyboard shortcuts (1-5 for tones)
     document.addEventListener("keydown", (e) => {
@@ -322,24 +320,16 @@ class ThaiToneDriller {
     const toggleBtn = document.getElementById("toggleRules");
     const isShowing = rulesPanel.classList.contains("show");
     toggleBtn.textContent = isShowing
-      ? "📁 Hide Tone Rules"
+      ? "📚 Hide Tone Rules"
       : "📚 Show Tone Rules";
   }
 
   toggleToneTable() {
-    const tablePanel = document.getElementById("toneTablePanel");
-    const toggleBtn = document.getElementById("toggleTable");
-    if (!tablePanel || !toggleBtn) return;
-
-    const isVisible = tablePanel.style.display === "block";
-
-    if (isVisible) {
-      tablePanel.style.display = "none";
-      toggleBtn.textContent = "📋 Show Table";
-    } else {
-      tablePanel.style.display = "block";
-      toggleBtn.textContent = "📋 Hide Table";
-    }
+    const panel = document.getElementById("toneTablePanel");
+    const btn = document.getElementById("toggleTable");
+    const visible = panel.style.display === "block";
+    panel.style.display = visible ? "none" : "block";
+    btn.textContent = visible ? "📋 Show Tone Table" : "📋 Hide Tone Table";
   }
 
   getToneRulesPanel() {
