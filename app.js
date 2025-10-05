@@ -224,12 +224,12 @@ class ThaiToneDriller {
 
     this.isAnswered = true;
 
-    // Auto-advance after 3 seconds
+    /* Auto-advance after 3 seconds
     setTimeout(() => {
       if (this.isAnswered) {
         this.loadNewWord();
       }
-    }, 3000);
+    }, 3000);*/
   }
 
   showButtonFeedback(selectedTone, correctTone) {
