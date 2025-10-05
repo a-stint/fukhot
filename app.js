@@ -106,12 +106,12 @@ class ThaiToneDriller {
 
     this.toneRules = {
       mid: "Mid tone: Middle/low class consonants in live syllables without tone marks",
-      low: "Low tone: Middle/high class consonants with ไม้เอก [  ่ ] or in dead syllables",
+      low: "Low tone: Middle/high class consonants with ไม้เอก (อ่) or in dead syllables",
       falling:
-        "Falling tone: With ไม้โท [  ้ ] or low class consonants in dead long syllables",
-      high: "High tone: Low class consonants with ไม้โท [  ้ ] or in dead short syllables",
+        "Falling tone: With ไม้โท (อ้) or low class consonants in dead long syllables",
+      high: "High tone: Low class consonants with ไม้โท (อ้) or in dead short syllables",
       rising:
-        "Rising tone: High class consonants in live syllables or with ไม้จัตวา [  ๋ ]",
+        "Rising tone: High class consonants in live syllables or with ไม้จัตวา (อ๋)",
     };
 
     this.currentWord = null;
