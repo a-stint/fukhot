@@ -106,12 +106,12 @@ class ThaiToneDriller {
 
     this.toneRules = {
       mid: "Mid tone: Middle/low class consonants in live syllables without tone marks",
-      low: "Low tone: Middle/high class consonants with mai ek (่) or in dead syllables",
+      low: "Low tone: Middle/high class consonants with ไม้เอก [  ่ ] or in dead syllables",
       falling:
-        "Falling tone: With mai tho (้) or low class consonants in dead long syllables",
-      high: "High tone: Low class consonants with mai tho (้) or in dead short syllables",
+        "Falling tone: With ไม้โท [  ้ ] or low class consonants in dead long syllables",
+      high: "High tone: Low class consonants with ไม้โท [  ้ ] or in dead short syllables",
       rising:
-        "Rising tone: High class consonants in live syllables or with mai chattawa (๋)",
+        "Rising tone: High class consonants in live syllables or with ไม้จัตวา [  ๋ ]",
     };
 
     this.currentWord = null;
@@ -145,6 +145,13 @@ class ThaiToneDriller {
     document.getElementById("toggleRules").addEventListener("click", () => {
       this.toggleToneRules();
     });
+
+    const toggleTableBtn = document.getElementById("toggleTable");
+    if (toggleTableBtn) {
+      toggleTableBtn.addEventListener("click", () => {
+        this.toggleToneTable();
+      });
+    }
 
     // Keyboard shortcuts (1-5 for tones)
     document.addEventListener("keydown", (e) => {
@@ -317,6 +324,22 @@ class ThaiToneDriller {
     toggleBtn.textContent = isShowing
       ? "📁 Hide Tone Rules"
       : "📚 Show Tone Rules";
+  }
+
+  toggleToneTable() {
+    const tablePanel = document.getElementById("toneTablePanel");
+    const toggleBtn = document.getElementById("toggleTable");
+    if (!tablePanel || !toggleBtn) return;
+
+    const isVisible = tablePanel.style.display === "block";
+
+    if (isVisible) {
+      tablePanel.style.display = "none";
+      toggleBtn.textContent = "📋 Show Table";
+    } else {
+      tablePanel.style.display = "block";
+      toggleBtn.textContent = "📋 Hide Table";
+    }
   }
 
   getToneRulesPanel() {
