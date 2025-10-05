@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thai Tone Recognition Driller</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="app-header">
+        <h1>Thai Tone Recognition Driller</h1>
+        <p class="app-subtitle">
+          Master Thai tones with authentic educational vocabulary
+        </p>
+        <div class="progress-summary">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-label">Score</span>
+              <span class="stat-value" id="score">0/0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Accuracy</span>
+              <span class="stat-value" id="accuracy">0%</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Streak</span>
+              <span class="stat-value" id="streak">0</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Tone Rules Toggle -->
+      <div class="tone-rules-toggle">
+        <button class="btn btn-outline" id="toggleRules">
+          📚 Show Tone Rules
+        </button>
+      </div>
+
+      <!-- Main Practice Area -->
+      <main class="practice-area">
+        <!-- Word Display -->
+        <div class="word-display-card">
+          <div class="thai-word" id="currentWord">กิน</div>
+          <div class="word-info">
+            <span class="meaning" id="wordMeaning"
+              >Educational vocabulary: eat</span
+            >
+          </div>
+        </div>
+
+        <!-- Tone Selection Buttons -->
+        <div class="tone-selection">
+          <h3 class="section-title">Select the correct tone:</h3>
+          <div class="tone-buttons">
+            <button class="tone-btn" data-tone="mid">
+              <span class="tone-name">Mid</span>
+              <span class="tone-thai">กลาง</span>
+            </button>
+            <button class="tone-btn" data-tone="low">
+              <span class="tone-name">Low</span>
+              <span class="tone-thai">เอก</span>
+            </button>
+            <button class="tone-btn" data-tone="falling">
+              <span class="tone-name">Falling</span>
+              <span class="tone-thai">โท</span>
+            </button>
+            <button class="tone-btn" data-tone="high">
+              <span class="tone-name">High</span>
+              <span class="tone-thai">ตรี</span>
+            </button>
+            <button class="tone-btn" data-tone="rising">
+              <span class="tone-name">Rising</span>
+              <span class="tone-thai">จัตวา</span>
+            </button>
+          </div>
+
+          <!-- Controls -->
+          <div class="controls">
+            <button class="btn btn-primary" id="nextWord">Next Word</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
